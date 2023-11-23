@@ -9,3 +9,9 @@ export enum Background {
   Orange = 'orange',
   Blue = 'blue',
 }
+
+export type BenefitType = {
+  icon: JSX.Element
+  title: string
+  text: string
+}

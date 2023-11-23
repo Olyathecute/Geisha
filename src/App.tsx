@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Navbar from '@/scenes/navbar'
 import Home from '@/scenes/home'
+import Benefits from '@/scenes/benefits'
 import { SelectedPage } from './shared/types'
 import useMediaQuery from './hooks/useMediaQuery'
 
@@ -31,6 +32,7 @@ function App() {
         isAboveMediaScreen={isAboveMediaScreen}
       />
       <Home setSelectedPage={setSelectedPage} isAboveMediaScreen={isAboveMediaScreen} />
+      <Benefits setSelectedPage={setSelectedPage} />
     </div>
   )
 }

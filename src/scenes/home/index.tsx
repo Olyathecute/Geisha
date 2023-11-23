@@ -27,25 +27,25 @@ function Home({ isAboveMediaScreen, setSelectedPage }: Props) {
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           <div className='mt-32 mb-10 md:basis-3/5'>
-            <motion.div
-              className='md:-mt-40 mb-10'
-              initial='hidden'
-              whileInView='visible'
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 3 }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
-              }}
-            >
-              <div className='mb-10'>
+            <div className='md:-mt-40 mb-10'>
+              <motion.div
+                className='mb-10'
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 3 }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
+              >
                 <img alt='home-page-title' src={isAboveMediaScreen ? HomePageTitle : HomePageLogo} />
-              </div>
+              </motion.div>
               <p className='text-md md:text-start'>
                 In the harsh world of samurai there must be a place and time for sublime pleasures, which is why
                 messengers from the “world of flowers” were needed.
               </p>
-            </motion.div>
+            </div>
             <div className='flex items-center gap-10'>
               <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
               <AnchorLink
@@ -62,7 +62,7 @@ function Home({ isAboveMediaScreen, setSelectedPage }: Props) {
           </div>
         </motion.div>
         {isAboveMediaScreen && (
-          <div className='h-[150px] w-full bg-blue-3 py-20'>
+          <div className='h-[100px] w-full bg-blue-3 p-3 mt-5'>
             <div className='flex justify-around w-full'>
               <img alt='flower' src={Flower1} className='w-20 h-20' />
               <img alt='flower' src={Flower2} className='w-20 h-20' />
