@@ -15,3 +15,9 @@ export type BenefitType = {
   title: string
   text: string
 }
+
+export type SlideType = {
+  title: string
+  text: string
+  img: string
+}

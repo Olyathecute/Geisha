@@ -1,33 +1,15 @@
 import {} from 'react'
 import { SelectedPage, BenefitType } from '@/shared/types'
-import { SparklesIcon, RectangleGroupIcon, UserGroupIcon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import HText from '@/shared/HText'
 import Benefit from './Benefit'
 import Geisha from '@/assets/BenefitsImg.jpeg'
 import ActionButton from '@/shared/ActionButton'
+import { benefits, benefitText1, benefitText2 } from '@/shared/data'
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
-
-const benefits: BenefitType[] = [
-  {
-    icon: <SparklesIcon className='h-8 w-8' />,
-    title: 'Insider Information',
-    text: 'Dfaucibus scelerisque donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum vitae nunc velis.',
-  },
-  {
-    icon: <RectangleGroupIcon className='h-8 w-8' />,
-    title: 'Variety of Workshops',
-    text: 'Oacilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis.',
-  },
-  {
-    icon: <UserGroupIcon className='h-8 w-8' />,
-    title: 'Online community',
-    text: 'Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursd.',
-  },
-]
 
 const container = {
   hidden: {},
@@ -72,20 +54,8 @@ function Benefits({ setSelectedPage }: Props) {
             <HText>
               ENIM <span className='text-red-1'>LACUS</span> ALIQUET PORTTITOR
             </HText>
-
-            <p className='my-5'>
-              Id interdum velit laoreet id donec ultrices tincidunt. Dictum non consectetur a erat nam at. Arcu dictum
-              varius duis at consectetur lorem donec massa sapien. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas
-              maecenas pharetra convallis posuere vitae ultricies leo integer.
-            </p>
-            <p className='my-5'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Erat pellentesque adipiscing commodo elit at imperdiet. Tristique magna sit amet
-              purus. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Eu feugiat pretium nibh ipsum.
-              Egestas pretium aenean pharetra magna.
-            </p>
-
+            <p className='my-5'>{benefitText1}</p>
+            <p className='my-5'>{benefitText2}</p>
             <div className='my-7'>
               <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
             </div>
