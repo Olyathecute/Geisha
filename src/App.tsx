@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import useMediaQuery from '@/hooks/useMediaQuery'
 import Navbar from '@/scenes/navbar'
 import Home from '@/scenes/home'
 import Benefits from '@/scenes/benefits'
 import OurClasses from '@/scenes/ourClasses'
-import { SelectedPage } from './shared/types'
-import useMediaQuery from './hooks/useMediaQuery'
+import ContactUs from '@/scenes/contactUs'
+import { SelectedPage } from '@/shared/types'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -35,6 +36,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} isAboveMediaScreen={isAboveMediaScreen} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
     </div>
   )
 }

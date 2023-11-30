@@ -65,6 +65,21 @@ export const benefits: Array<BenefitType> = [
   },
 ]
 
+export const errorMessages = {
+  name: {
+    required: 'Input your Name',
+    maxLength: 'Max length is 50 characters',
+  },
+  email: {
+    required: 'Input your Email',
+    pattern: 'Your Email is incorrect',
+  },
+  message: {
+    required: 'Input your Message',
+    maxLength: 'Max length is 2000 characters',
+  },
+}
+
 export const benefitText1: string =
   'Id interdum velit laoreet id donec ultrices tincidunt. Dictum non consectetur a erat nam at. Arcu dictum varius duis at consectetur lorem donec massa sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere vitae ultricies leo integer.'
 
@@ -73,3 +88,6 @@ export const benefitText2: string =
 
 export const ourClassesText: string =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi sit amet volutpat consequat lacus sed viverra tellus in hac habitasse platea. Ut sem nulla pharetra diam. Proin sed libero enim sed elementum tempus egestas faucibus turpis in eu mi.'
+
+export const contactUsText: string =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis commodo odio aenean sed adipiscing diam. Lobortis mattis aliquam faucibus purus in. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Eget lorem dolor sed viverra   ipsum. Urna cursus eget nunc scelerisque viverra mauris. Vel fringilla est ullamcorper eget nulla.'
