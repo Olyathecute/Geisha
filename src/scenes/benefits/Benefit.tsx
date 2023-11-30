@@ -1,7 +1,7 @@
-import { SelectedPage } from '@/shared/types'
-import {} from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { motion } from 'framer-motion'
+import { SelectedPage } from '@/shared/types'
+import { buttons } from '@/shared/data'
 
 type Props = {
   icon: JSX.Element
@@ -11,7 +11,7 @@ type Props = {
 }
 
 const childVariant = {
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 0, scale: 0.5 },
   visible: { opacity: 1, scale: 1 },
 }
 
@@ -28,7 +28,7 @@ function Benefit({ icon, title, text, setSelectedPage }: Props) {
         onClick={() => setSelectedPage(SelectedPage.ContactUs)}
         href={`#${SelectedPage.ContactUs}`}
       >
-        <p>Learn More</p>
+        <p>{buttons.joinNow}</p>
       </AnchorLink>
     </motion.div>
   )

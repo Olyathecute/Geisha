@@ -1,10 +1,10 @@
-import { SelectedPage } from '@/shared/types'
-import ContactUsImg from '@/assets/ContactUsImg.jpeg'
-import HText from '@/shared/HText'
-import { motion } from 'framer-motion'
-import { contactUsText, errorMessages } from '@/shared/data'
 import { useForm } from 'react-hook-form'
+import { motion } from 'framer-motion'
+import HText from '@/shared/HText'
 import Input from './Input'
+import { SelectedPage } from '@/shared/types'
+import { buttons, contactUsText, contactUsTitle, errorMessages } from '@/shared/data'
+import ContactUsImg from '@/assets/ContactUsImg.jpeg'
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -30,7 +30,8 @@ function ContactUs({ setSelectedPage }: Props) {
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
         <div>
           <HText>
-            <span className='text-red-1'>JOIN NOW</span> TO GET IN SHARE
+            <span className='text-red-1'>{contactUsTitle.first}</span>
+            {contactUsTitle.second}
           </HText>
           <p className='py-5'>{contactUsText}</p>
         </div>
@@ -65,7 +66,7 @@ function ContactUs({ setSelectedPage }: Props) {
               type='submit'
               className='mt-5 rounded-md bg-blue-3 text-white-1 px-20 py-4 transition duration hover:bg-blue-2'
             >
-              SUBMIT
+              {buttons.submit}
             </button>
           </form>
           <div className='h-56 w-auto mt-10 md:h-full md:w-3/5 md:mt-0'>

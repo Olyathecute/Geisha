@@ -1,4 +1,3 @@
-import {} from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { motion } from 'framer-motion'
 import { SelectedPage } from '@/shared/types'
@@ -7,7 +6,7 @@ import HomePageTitle from '@/assets/HomePageTitle.svg'
 import HomePageLogo from '@/assets/HomePageLogo.svg'
 import HomePageImg from '@/assets/HomePageImg.png'
 import HomePageImgSecond from '@/assets/HomePageImgSecond.png'
-import { flowers } from '@/shared/data'
+import { buttons, flowers, homeText } from '@/shared/data'
 
 type Props = {
   isAboveMediaScreen: boolean
@@ -37,19 +36,16 @@ function Home({ isAboveMediaScreen, setSelectedPage }: Props) {
               >
                 <img alt='home-page-title' src={isAboveMediaScreen ? HomePageTitle : HomePageLogo} />
               </motion.div>
-              <p className='text-md md:text-start'>
-                In the harsh world of samurai there must be a place and time for sublime pleasures, which is why
-                messengers from the “world of flowers” were needed.
-              </p>
+              <p className='text-md md:text-start'>{homeText}</p>
             </div>
             <div className='flex items-center gap-10'>
-              <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
+              <ActionButton setSelectedPage={setSelectedPage}>{buttons.joinNow}</ActionButton>
               <AnchorLink
                 className='text-sm font-bold text-white-1 underline hover:text-white-3'
                 onClick={() => setSelectedPage(SelectedPage.ContactUs)}
                 href={`#${SelectedPage.ContactUs}`}
               >
-                Learn More
+                {buttons.learnMore}
               </AnchorLink>
             </div>
           </div>
@@ -67,9 +63,6 @@ function Home({ isAboveMediaScreen, setSelectedPage }: Props) {
           </div>
         )}
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
     </>
   )
 }

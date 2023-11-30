@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Background, SelectedPage } from '@/shared/types'
 import Link from './Link'
 import ActionButton from '@/shared/ActionButton'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import Logo from '@/assets/Logo.svg'
+import { Background, SelectedPage } from '@/shared/types'
+import { buttons, pages } from '@/shared/data'
 
 type Props = {
   isTopOfPage: boolean
@@ -11,8 +12,6 @@ type Props = {
   selectedPage: SelectedPage
   setSelectedPage: (value: SelectedPage) => void
 }
-
-const pages: string[] = ['Home', 'Benefits', 'Our Classes', 'Contact Us']
 
 const Navbar = ({ isTopOfPage, isAboveMediaScreen, selectedPage, setSelectedPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
@@ -40,8 +39,8 @@ const Navbar = ({ isTopOfPage, isAboveMediaScreen, selectedPage, setSelectedPage
                   ))}
                 </div>
                 <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>Become a member</ActionButton>
+                  <p>{buttons.signIn}</p>
+                  <ActionButton setSelectedPage={setSelectedPage}>{buttons.becomeMember}</ActionButton>
                 </div>
               </div>
             ) : (
