@@ -30,22 +30,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Check build
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Files:"
-          ls -la
-          echo "Build directory:"
-          ls -la ./build
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     needs: build
